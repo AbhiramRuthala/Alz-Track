@@ -11,9 +11,11 @@ def index():
 @app.route('/login', methods=['POST'])
 def process():
     data_from_form = request.form['name']
+    data_from_form2 = request.form['email']
+    #data_from_form3 = request.form['password']
 
     #print("Return to the website: https://alztrack.framer.ai/")
-    return f"Name: {data_from_form}. You can return to the website at https://alztrack.framer.ai/"
+    return f"Name: {data_from_form}. Email: {data_from_form2}. You can return to the website at https://alztrack.framer.ai/"
 
 if __name__ == '__main__':
     #app.run(debug=True, port=5002)
